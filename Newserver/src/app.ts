@@ -31,7 +31,7 @@ export const io = new SocketIOServer(server,{
         methods: ['GET', 'POST'],        // Allow GET and POST methods
         credentials: true,               // Enable credentials (cookies)
     },
-    transports: ['polling'],
+    transports: ['websocket', 'polling'],
 })  // Initialize socket.io
 
 
