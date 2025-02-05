@@ -27,7 +27,7 @@ const server = http.createServer(app);
 // Create an HTTP server to attach socket.io
 export const io = new SocketIOServer(server,{
     cors: {
-        origin: process.env.APLLICATION_URL,  // Allow your frontend URL
+        origin: process.env.APPLICATION_URL,  // Allow your frontend URL
         methods: ['GET', 'POST'],        // Allow GET and POST methods
         credentials: true,               // Enable credentials (cookies)
     },
@@ -51,7 +51,7 @@ app.use(express.json())
 
 app.use(cookieParser());
 app.use(cors({
-    origin: 'http://localhost:3000',
+    origin: process.env.APPLICATION_URL,
     credentials: true,
 }));
 
