@@ -1,6 +1,6 @@
 import express, { Request, Response } from "express";
 import User from "../DATABASE/usermodel";
-import bcrypt from 'bcrypt'
+import bcrypt from 'bcryptjs';
 import { v2 as cloudinary } from "cloudinary";
 interface AuthenticatedRequest extends Request {
     user?: {
