@@ -31,6 +31,7 @@ export const io = new SocketIOServer(server,{
         methods: ['GET', 'POST'],        // Allow GET and POST methods
         credentials: true,               // Enable credentials (cookies)
     },
+    transports: ['polling'],
 })  // Initialize socket.io
 
 
@@ -55,6 +56,7 @@ app.use(cors({
     credentials: true,
 }));
 
+
 connectdb();
 app.use(Allroute);
 
@@ -70,6 +72,7 @@ io.on("connection", (socket: Socket) => {
 
 
 
-const PORT = process.env.PORT || 4000; // Use Vercel assigned port
+const PORT = process.env.PORT || 4000;
+
 
 export default server; 
