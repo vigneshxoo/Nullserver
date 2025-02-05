@@ -11,9 +11,10 @@ const generateToken=(userId:any,res:any)=>{
     const token=jwt.sign({userId},scretkey,{expiresIn:"2h"})
     res.cookie("jwt",token,{
         maxAge:15*24*60*1000, 
+        secure:true,
         httpOnly:true,
-        sameSite:"strict",
-        secure:process.env.NODE_ENV!=="development"
+        sameSite: "None",
+        
     })
         
     

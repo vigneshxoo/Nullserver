@@ -28,7 +28,7 @@ export const PrivateRouter = () => {
     if (isLoading) {
         return (
             <div className='h-screen flex justify-center items-center'>
-                <p>Loading...</p>
+                <p>Loading.../</p>
             </div>
         );
     }
