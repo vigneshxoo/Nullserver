@@ -1,6 +1,6 @@
 import  express,{Request,Response}  from "express";
 import User from "../DATABASE/usermodel";
-import bcrypt from 'bcrypt';
+import bcrypt from 'bcryptjs'
 import generateToken from "../utils/Token";
 import { Subscription } from "../DATABASE/subscriptionModel";
 
@@ -34,7 +34,6 @@ async function signup(req: Request, res: Response,) {
 
         })
         await subscription.save()
-
         const newUser=new User({
             
          username,

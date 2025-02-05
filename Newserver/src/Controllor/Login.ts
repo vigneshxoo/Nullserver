@@ -1,7 +1,7 @@
 import express, { Request, Response } from "express";
 import User from "../DATABASE/usermodel";
 import generateToken from "../utils/Token";
-import bcrypt from 'bcrypt';
+import bcrypt from 'bcryptjs'
 import { Subscription } from "../DATABASE/subscriptionModel";
 
 
