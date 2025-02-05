@@ -1,1 +1,1 @@
-export const baseUrl="http://localhost:4000"
+export const baseUrl="https://nullserver-xwo6-duq62xihq-vigneshxoos-projects.vercel.app"
