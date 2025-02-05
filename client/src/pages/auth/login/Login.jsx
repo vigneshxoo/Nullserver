@@ -127,11 +127,13 @@ import { Link, useNavigate } from "react-router-dom";
 import { IoPlayOutline } from "react-icons/io5";
 import { useMutation } from "@tanstack/react-query";
 import { MdOutlineMail, MdPassword } from "react-icons/md";
-import { baseUrl } from "../../../constant/url";
+import {  baseUrl } from "../../../constant/url";
 import toast from "react-hot-toast";
 import { motion } from "framer-motion"; // For animations
 
 const LoginPage = () => {
+     console.log(baseUrl)
+
     const navigate = useNavigate();
     const [formData, setFormData] = useState({
         username: "",
