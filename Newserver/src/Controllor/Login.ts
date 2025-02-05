@@ -1,9 +1,8 @@
 import express, { Request, Response } from "express";
 import User from "../DATABASE/usermodel";
 import generateToken from "../utils/Token";
-import bcrypt from 'bcrypt'
+import bcrypt from 'bcrypt';
 import { Subscription } from "../DATABASE/subscriptionModel";
-
 
 
 export const login = async (req: Request, res: Response) => {
