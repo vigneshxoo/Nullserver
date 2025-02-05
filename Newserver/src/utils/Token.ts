@@ -3,7 +3,7 @@ import jwt from "jsonwebtoken"
 
 
 const generateToken=(userId:any,res:any)=>{
-    const scretkey=process.env.scretkey
+    const scretkey=process.env.SECRET_KEY
     if(!scretkey){
         return res.status(500).json({ message: "JWT_SECRET is not defined in environment variables" });
     }

@@ -9,7 +9,7 @@ interface AuthenticatedRequest extends Request {
 }
 
 export async function producterRoute(req: AuthenticatedRequest, res: Response, next: NextFunction)  {
-    const scretkey=process.env.scretkey
+    const scretkey=process.env.SECRET_KEY
     // console.log(scretkey)
     try {
       

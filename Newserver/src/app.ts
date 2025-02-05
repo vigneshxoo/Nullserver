@@ -10,12 +10,12 @@ import { Server as SocketIOServer, Socket } from 'socket.io';
 import connectdb from "./DATABASE/ConnectDb";
 import { Allroute } from "./auth_routes/Routes";
 dotenv.config()
-console.log(process.env.API_KEY)
+
 
 cloudinary.v2.config({
-    api_key: process.env.APIKEY,
-    api_secret:process.env. APISCRETKEY,
-    cloud_name:process.env. CLOUDNAME,
+    api_key: process.env.API_KEY,
+    api_secret:process.env. API_SECRET_KEY,
+    cloud_name:process.env. CLOUD_NAME,
     secure: true,
     timeout: 120000,
 });
