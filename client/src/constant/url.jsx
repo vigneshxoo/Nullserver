@@ -1,1 +1,1 @@
-export const baseUrl="https://nullserver-xwo6-duq62xihq-vigneshxoos-projects.vercel.app"
+export const baseUrl=import.meta.env.BASE_URL
