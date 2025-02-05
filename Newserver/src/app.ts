@@ -43,10 +43,10 @@ const storage = multer.diskStorage({
     }
 });
 
-export const upload = multer({ storage: storage });
+export const upload = multer({ storage: storage,limits: { fileSize: 10 * 1024 * 1024 }, });
 
-app.use(bodyParser.json({ limit: "50mb" }));
-app.use(bodyParser.urlencoded({ limit: "50mb", extended: true }));
+app.use(bodyParser.json({ limit: "10mb" }));
+app.use(bodyParser.urlencoded({ limit: "10mb", extended: true }));
 app.use(express.json())
 
 app.use(cookieParser());
