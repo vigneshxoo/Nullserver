@@ -27,14 +27,12 @@ const server = http.createServer(app);
 // Create an HTTP server to attach socket.io
 export const io = new SocketIOServer(server,{
     cors: {
-        origin: 'http://localhost:3000',  // Allow your frontend URL
+        origin: process.env.APLLICATION_URL,  // Allow your frontend URL
         methods: ['GET', 'POST'],        // Allow GET and POST methods
         credentials: true,               // Enable credentials (cookies)
     },
 })  // Initialize socket.io
 
-const port: number = 8000;
-console.log(process.env.PORT);
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -71,7 +69,8 @@ io.on("connection", (socket: Socket) => {
 });
 
 
-// Start the server with socket.io
-server.listen(port, () => {
-    console.log(`Server running on http://localhost:${process.env.PORT}`);
+
+const PORT = process.env.PORT || 4000; // Use Vercel assigned port
+server.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
